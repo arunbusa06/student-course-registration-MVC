@@ -1,0 +1,30 @@
+@{
+    ViewData["Title"] = "Home";
+}
+<section class="hero">
+    <div class="hero-copy">
+        <p class="eyebrow">STUDENT COURSE REGISTRATION SYSTEM</p>
+        <h1>Start your academic journey with confidence.</h1>
+        <p class="hero-text">A simple portal to register students, review the student list and view individual registration details.</p>
+        <div class="hero-actions">
+            <a class="button button-primary" asp-controller="Student" asp-action="Create">Register a Student</a>
+            <a class="button button-light" asp-controller="Student" asp-action="Index">View Student List</a>
+        </div>
+    </div>
+    <div class="hero-card">
+        <div class="hero-icon">✦</div>
+        <h2>One place for student registrations</h2>
+        <p>Enter student information through a validated form and explore saved registrations.</p>
+        <div class="mini-stats">
+            <div><strong>01</strong><span>Register</span></div>
+            <div><strong>02</strong><span>Review</span></div>
+            <div><strong>03</strong><span>Explore</span></div>
+        </div>
+    </div>
+</section>
+
+<section class="feature-grid">
+    <article class="feature-card"><div class="feature-number">01</div><h3>Easy Registration</h3><p>Enter name, email, course and semester using a clean registration form.</p></article>
+    <article class="feature-card"><div class="feature-number">02</div><h3>Validated Details</h3><p>Required fields, email format, text length and semester range are checked.</p></article>
+    <article class="feature-card"><div class="feature-number">03</div><h3>Student Directory</h3><p>View all registrations and open a dedicated details page for each student.</p></article>
+</section>

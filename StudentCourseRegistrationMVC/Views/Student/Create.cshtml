@@ -1,0 +1,43 @@
+@model Student
+@{
+    ViewData["Title"] = "Register Student";
+}
+<div class="form-page">
+    <div class="page-heading">
+        <div><p class="eyebrow">NEW REGISTRATION</p><h1>Student Registration</h1><p class="muted">Fill in the details below. All fields are required.</p></div>
+        <a class="back-link" asp-action="Index">← Back to list</a>
+    </div>
+
+    <div class="form-card">
+        <form asp-action="Create" method="post">
+            <div asp-validation-summary="ModelOnly" class="validation-summary"></div>
+            <div class="form-grid">
+                <div class="form-group full">
+                    <label asp-for="Name"></label>
+                    <input asp-for="Name" placeholder="e.g. Aarav Patel" />
+                    <span asp-validation-for="Name" class="field-error"></span>
+                </div>
+                <div class="form-group full">
+                    <label asp-for="Email"></label>
+                    <input asp-for="Email" type="email" placeholder="name@example.com" />
+                    <span asp-validation-for="Email" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Course"></label>
+                    <input asp-for="Course" placeholder="e.g. Computer Engineering" />
+                    <span asp-validation-for="Course" class="field-error"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Semester"></label>
+                    <input asp-for="Semester" type="number" min="1" max="8" placeholder="1 - 8" />
+                    <span asp-validation-for="Semester" class="field-error"></span>
+                </div>
+            </div>
+            <div class="form-actions">
+                <a class="button button-light" asp-action="Index">Cancel</a>
+                <button class="button button-primary" type="submit">Submit Registration</button>
+            </div>
+        </form>
+    </div>
+    <p class="form-note">Validation is performed on the server using Data Annotations and ModelState.IsValid.</p>
+</div>
